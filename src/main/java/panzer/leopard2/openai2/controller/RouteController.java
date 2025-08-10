@@ -9,4 +9,9 @@ public class RouteController {
     public String askview() {
         return "ask";
     }
+
+    @GetMapping("/imageview")
+    public String imageview() {
+        return "image";
+    }
 }
