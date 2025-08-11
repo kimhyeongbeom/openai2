@@ -1,4 +1,4 @@
-package panzer.leopard2.openai2.controller;
+package panzer.leopard2.openai2.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

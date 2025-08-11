@@ -14,4 +14,9 @@ public class RouteController {
     public String imageview() {
         return "image";
     }
+
+    @GetMapping("/analyzeimage")
+    public String analyzeimage(){
+        return "analyze";
+    }
 }
