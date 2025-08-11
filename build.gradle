@@ -32,6 +32,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
     implementation("com.google.code.gson:gson:2.13.1")
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation("org.json:json:20250517")
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'

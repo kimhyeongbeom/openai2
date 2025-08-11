@@ -19,4 +19,9 @@ public class RouteController {
     public String analyzeimage(){
         return "analyze";
     }
+
+    @GetMapping("/mathsolve")
+    public String mathsolve(){
+        return "mathsolve";
+    }
 }
