@@ -18,7 +18,7 @@ import java.util.List;
 public class ImageGenerationController {
     private final ImageService imageService;
 
-    @PostMapping(value = "/image", consumes = "applcation/json; charset=UTF-8")
+    @PostMapping(value = "/image", consumes = "application/json; charset=UTF-8")
     public List<String> image(@RequestBody ImageRequestDTO requestDTO) throws IOException {
         ImageResponse imageResponse = imageService.getImageGen(requestDTO);
 

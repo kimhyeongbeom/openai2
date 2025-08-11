@@ -16,14 +16,21 @@ public class ImageService {
     private final OpenAiImageModel openAiImageModel;
 
     public ImageResponse getImageGen(ImageRequestDTO requestDTO) {
+        String quality = "standard";
+
+        if ( requestDTO.getModel().equals("dall-e-3") ) {
+            quality = "hd";
+        }
         ImageResponse imageResponse =  openAiImageModel
                 .call(new ImagePrompt(requestDTO.getMessage(),
                         OpenAiImageOptions.builder()
                                 .model(requestDTO.getModel())
-                                .quality("hd")
+//                                .quality(quality)
                                 .N(requestDTO.getN())
                                 .height(1024)
-                                .width(1024).build()));
+                                .width(1024)
+                                .build()
+                                ));
         return imageResponse;
     }
 }
