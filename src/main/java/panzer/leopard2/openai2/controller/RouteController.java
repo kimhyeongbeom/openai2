@@ -34,4 +34,9 @@ public class RouteController {
     public String stt(){
         return "stt";
     }
+
+    @GetMapping("/tts")
+    public String tts(){
+        return "tts";
+    }
 }
