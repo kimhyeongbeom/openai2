@@ -39,4 +39,9 @@ public class RouteController {
     public String tts(){
         return "tts";
     }
+
+    @GetMapping("/sql")
+    public String sql(){
+        return "sql";
+    }
 }
