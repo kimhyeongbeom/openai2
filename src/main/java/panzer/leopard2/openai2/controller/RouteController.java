@@ -29,4 +29,9 @@ public class RouteController {
     public String recipeview(){
         return "recipe";
     }
+
+    @GetMapping("/stt")
+    public String stt(){
+        return "stt";
+    }
 }
