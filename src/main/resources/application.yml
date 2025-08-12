@@ -8,3 +8,7 @@ spring:
 
 upload:
   path: src/main/resources/static/uploads/
+
+google:
+  api-key: ${GOOLE_API_KEY}
+  cx: ${GOOGLE_CX}

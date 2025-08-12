@@ -24,4 +24,9 @@ public class RouteController {
     public String mathsolve(){
         return "mathsolve";
     }
+
+    @GetMapping("/recipeview")
+    public String recipeview(){
+        return "recipe";
+    }
 }

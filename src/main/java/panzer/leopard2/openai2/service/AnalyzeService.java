@@ -31,6 +31,9 @@ public class AnalyzeService {
     @Value("classpath:/systemMath.message")
     private Resource systemMathMessage;
 
+    @Value("${google.api-key}")
+    private String googleApiKey;
+
     public String analyzeImage(MultipartFile imageFile, String message) {
         // MIME 타입 결정
         String contentType = imageFile.getContentType();
@@ -73,7 +76,7 @@ public class AnalyzeService {
     //                                                                         query=EBS 세제곱근, 제곱근, 곱셈
     public List<String> searchYouTubeVideos(String query) throws Exception {
         String url = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=EBS " +
-                query + "&order=relevance&key=AIzaSyA4KW65sAMv1ziOmr4-qMuJHEL9ivH_5YY";
+                query + "&order=relevance&key="+googleApiKey;
 
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
