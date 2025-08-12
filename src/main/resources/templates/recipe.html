@@ -110,8 +110,6 @@
 
             const data = await response.json();
 
-            // 로딩 메시지 숨기기
-            document.getElementById('loadingMessage').style.display = 'none';
 
             // 레시피와 URL을 출력
             document.getElementById('recipeOutput').innerText = `${data.recipe}`;
@@ -127,9 +125,11 @@
 
         } catch (error) {
             console.error('에러 발생:', error);
-            document.getElementById('loadingMessage').style.display = 'none';
             document.getElementById('recipeOutput').innerHTML = `<p class="text-danger">레시피 생성 중 오류가 발생했습니다.</p>`;
             document.getElementById('recipeOutput').style.display = 'block';
+        } finally {
+            // 로딩 메시지 숨기기
+            document.getElementById('loadingMessage').style.display = 'none';
         }
     }
 </script>
